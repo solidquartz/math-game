@@ -1,0 +1,40 @@
+classes: 
+    -games
+    -questions
+    -turns
+    -player
+
+    roles:
+      -players
+        state: number of lives (3/3), name
+        behaviour: update lives (attr_accessor)
+      -games
+        state: turn number (/20), total score (P1: 3/3, P2: 3/3), players
+        behaviour: move to next turn, start/end a game, calculate score
+      -turns
+        state: question
+        behaviour: lose a life, check answer
+      -questions
+        state: question, answer
+        behaviour: check answer
+
+  info relevant to each class:
+    -game: winner, current turn, start/end, lives
+    -player: name, lives (3/3), win/lose
+    -question: text, correct answer
+    -turn: question number, decrease a life
+
+  order of initialization 
+    1. players
+    2. games
+    3. turns
+    4. questions
+
+  public methods
+    -create players
+    -create game
+    -lose a life
+    -question & answer
+  
+  current_player managed by or turn
+  user i/o: players, question, game 
