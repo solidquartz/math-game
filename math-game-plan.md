@@ -53,7 +53,5 @@ Gameplay:
 -The game prints the score: `P1 2/3 vs P2 0/3`
 -The game prints `---- NEW TURN ----`
 =>If a player loses, the game ends, and the other player wins
-=>If 20 turns are taken, the player with the most lives wins
-=>There can be a tie
 -The game prints `---- GAME OVER ----`
 -The game says `goodbye` and stops.
