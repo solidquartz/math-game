@@ -9,11 +9,11 @@ class Game
     @player_2 = player_2
   end
 
-  def switch_players
-    if @active_player == @player_1
-      @active_player = @player_2
-    elsif @active_player == @player_2
-      @active_player = @player_1
+  def switch_players(player)
+    if @active_player == @players[0]
+      @active_player = @players[1]
+    elsif @active_player == @players[1]
+      @active_player = @players[0]
     end
   end
 

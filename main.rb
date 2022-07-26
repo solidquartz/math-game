@@ -29,13 +29,13 @@ while player_1.lives > 0 && player_2.lives > 0
 
 #if player dies
   if player_1.lives == 0 
-    puts"#{player_2}, you win with #{player_2.lives} remaining! 🎉"
+    puts"🎉 #{player_2.name}, you win with #{player_2.lives} lives remaining! 🎉"
     puts "---------- GAME OVER ----------"
     puts "See you next time for another thrilling round of TwO-O Math Game!"
   end
 
   if player_2.lives == 0 
-    puts"#{player_1}, you win with #{player_1.lives} remaining! 🎉"
+    puts"🎉 #{player_1.name}, you win with #{player_1.lives} lives remaining! 🎉"
     puts "---------- GAME OVER ----------"
     puts "See you next time for another thrilling round of TwO-O Math Game!"
   end
@@ -44,7 +44,7 @@ while player_1.lives > 0 && player_2.lives > 0
   if player_1.lives > 0 && player_2.lives > 0
     puts "🔥 #{player_1.name}: #{player_1.lives}/3 vs #{player_2.name}: #{player_2.lives}/3 🔥"
 
-    game.switch_players
+    game.switch_players(game.active_player)
 
     puts "---------- NEW TURN ---------- "
   end
