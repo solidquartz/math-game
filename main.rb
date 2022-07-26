@@ -16,6 +16,7 @@ puts "Are you ready? #{player_1.name} is up first."
 while player_1.lives > 0 && player_2.lives > 0  
 
   question = Question.new(game.active_player)
+  
   question.create_question(game.active_player)
   player_input = gets.chomp.to_i
 
