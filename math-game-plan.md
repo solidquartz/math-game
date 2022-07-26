@@ -1,7 +1,12 @@
+A game is played by two players
+-Each player takes turns answering 20 math questions
+-If a player gets an answer wrong, they lose a life
+-A player has 3 lives. Once they lose all 3, the game ends, and the other player is the winner.
+-Answers are input with gets.chomp
+
 classes: 
     -games
     -questions
-    -turns
     -player
 
     roles:
@@ -38,3 +43,17 @@ classes:
   
   current_player managed by or turn
   user i/o: players, question, game 
+
+Gameplay:
+-A game is begun by calling `game`
+-A math question is randomly created and asked to one player
+-The player enters their answer
+-The game says if it's correct or incorrect
+=> If incorrect, the player loses a life
+-The game prints the score: `P1 2/3 vs P2 0/3`
+-The game prints `---- NEW TURN ----`
+=>If a player loses, the game ends, and the other player wins
+=>If 20 turns are taken, the player with the most lives wins
+=>There can be a tie
+-The game prints `---- GAME OVER ----`
+-The game says `goodbye` and stops.
